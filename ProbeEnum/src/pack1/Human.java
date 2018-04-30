@@ -23,17 +23,17 @@ public class Human {
 	
 	
 
-	public Human(String sex, String name, String lastname, String birthDay, String citizenship) throws ParseException  {
+	public Human(String sex, String name, String lastname, String birthDay, String citizenship) throws ParseException {
 		super();
 		this.sex = sex;
 		this.name = name;
 		this.lastname = lastname;
 		
-		//try {
+		try {
 			this.birthDay = sdf.parse(birthDay);
-		//} catch (ParseException e) {
-			//System.out.println(e);
-		//} 
+		} catch (ParseException e) {
+			System.out.println(e);
+		} 
 		
 		birthDayCal.setTime(this.birthDay);
 		this.age = present.get(present.YEAR)-birthDayCal.get(birthDayCal.YEAR);

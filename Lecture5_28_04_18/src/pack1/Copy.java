@@ -29,7 +29,7 @@ public class Copy {
 				throw e;
 			}
 		}
-		
+	File file;
 	}
 
-}
+

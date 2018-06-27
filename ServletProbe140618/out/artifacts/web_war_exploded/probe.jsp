@@ -1,4 +1,5 @@
-<%--
+<%@ page import="pack1.Student" %>
+<%@ page import="pack1.Group" %><%--
   Created by IntelliJ IDEA.
   User: HOME
   Date: 16.06.2018
@@ -37,6 +38,14 @@
         <th>Group</th>
         <th>Cource</th>
     </tr>
+    <%
+
+        Group gr=(Group) request.getAttribute("group");
+        for (Student stud: gr.getStudentList()) {
+        out.println("<tr><td>"+gr.getStudentList().indexOf(stud)+"</td><td>"+stud.getName()+"</td><td>"+stud.getLastmame()+"</td><td>"+stud.getBirthDay()+"</td><td>"
+        +stud.getSex()+"</td><td>"+stud.getGroupName()+"</td><td>"+stud.getCourse()+"</td></tr>");
+        }
+    %>
 </table>
 </body>
 </html>

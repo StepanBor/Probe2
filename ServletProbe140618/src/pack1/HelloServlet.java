@@ -45,6 +45,7 @@ public class HelloServlet extends HttpServlet {
         }
 //        pw.println(lm02);
         req.setAttribute("group", lm02);
+        req.getRequestDispatcher("probe.jsp").forward(req,resp);
     }
 
 

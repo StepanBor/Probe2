@@ -4,21 +4,20 @@ import java.text.ParseException;
 
 public class Main {
 
-	public static void main(String[] args) {
-		
-	
-		Student studProbe=null;
-		try {
-			studProbe=new Student("femail", "Gulnara", "Karimova", "06:08:1999", "Kazahstammn", 2.5);
-		} catch (ParseException e1) {
-			
-			e1.printStackTrace();
-		}
-		Student pr=new Student();
-		System.out.println(studProbe);
-		
+	final int x = 1;
 
-		
-}
+	public static void main(String[] args) {
+
+            int x = 2;                            //1
+            for (x = 3 ; x < 5 ; x++);            //2
+            System.out.println("x=" + x);
+
+        }
+
+    }
+
+
+
+
 
 }
